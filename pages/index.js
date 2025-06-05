@@ -45,6 +45,7 @@ export default function Home() {
       >
         <main className={styles.main}>
           <Header />
+          <h1>Привет, мир</h1>
           <Main />
           <Footer />
         </main>
