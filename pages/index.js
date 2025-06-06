@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import localFont from "next/font/local";
-import styles from "@/styles/Home.module.css";
+import styles from "@/styles/home.module.css";
 import { Header } from "@/components/Header";
 import { Main } from "@/components/Main";
 import { Footer } from "@/components/Footer";
@@ -18,7 +18,7 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export default function Home() {
+export default function home() {
   useEffect(() => {
     console.log('useEffect вызван');
     const script = document.createElement('script');
@@ -44,8 +44,8 @@ export default function Home() {
         // className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}
       >
         <main className={styles.main}>
+          {/* HTML index */}
           <Header />
-          <h1>Привет, мир</h1>
           <Main />
           <Footer />
         </main>

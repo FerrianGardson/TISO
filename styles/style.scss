@@ -1,0 +1,196 @@
+@import "reset";
+@import "carousel";
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+// ТИСО
+
+// ===========================
+// 🎨 Colors
+// ===========================
+
+$color-one: #89191c; // Red 10%
+$color-two: #222c35; // Blue-gray 30%
+$color-three: #ececec; // Neutral 60%
+
+$color-button: #89191c;
+$color-hover: #a8181c;
+$color-focus: #ea181d;
+
+$white: #ffffff;
+$black: #222c35; // как Two (30%)
+$gray: #fafafa;
+$gray-dark: #c0c0c0;
+$text: #686868;
+
+// ===========================
+// 🔠 Typography
+// ===========================
+
+$rem: 1rem;
+$p: $rem;
+
+$h1: 48px;
+$h2: 38px;
+$h3: 30px;
+$h4: 22px;
+$h5: 18px;
+$h6: $rem;
+
+$label: $rem;
+
+// ===========================
+// 📐 Spacing
+// ===========================
+
+$header-padding: 60px;
+
+// ===========================
+// 📦 Container
+// ===========================
+$content-width: 1190px;
+$font-header: Open Sans;
+$header-transform: uppercase;
+$font-text: Open Sans;
+$screen-padding: 120px 8*4*2px;
+
+// Текст
+
+h1 {
+  color: $color-two;
+  font-family: $font-header;
+  font-size: $h2;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: $header-transform;
+}
+h2 {
+  color: $color-two;
+  font-family: $font-header;
+  font-size: $h2;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: $header-transform;
+}
+h3 {
+  color: $color-two;
+  font-family: $font-header;
+  font-size: $h3;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: $header-transform;
+}
+h4 {
+  color: $color-two;
+  font-family: $font-header;
+  font-size: $h4;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: $header-transform;
+}
+h5 {
+  color: $color-two;
+  font-family: $font-header;
+  font-size: $h5;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: $header-transform;
+}
+h6 {
+  color: $color-two;
+  font-family: $font-header;
+  font-size: $h6;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: $header-transform;
+}
+
+p {
+  color: $text;
+
+  /* P */
+  font-family: $font-text;
+  font-size: $p;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+}
+
+// Разметка
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  padding: $screen-padding;
+  background: $white;
+  flex-wrap: nowrap;
+}
+
+.screen:nth-child(2) {
+background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.01) 100%), url(/img/tiso/bg_blur.png) lightgray 50% / cover no-repeat;
+}
+
+
+.content {
+  display: flex;
+  max-width: $content-width;
+  min-width: 290px;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 36px 10px;
+  flex-wrap: wrap;
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  row-gap: 60px;
+}
+
+$col: 90px;
+$gap: 10px;
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+    display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $gap;
+}
+.col-2 {
+  width: $col*2+$gap*1;
+}
+.col-3 {
+  width: $col*3+$gap*2;
+}
+
+// Фиксы
+
+.advantages .fix h4, .advantages .fix p {
+    letter-spacing: -0.5px;
+}
+
+.solutions {
+  
+  .wrap {
+    min-height: 192px;
+    display:flex;
+  }
+
+  img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: left bottom;
+  }
+}

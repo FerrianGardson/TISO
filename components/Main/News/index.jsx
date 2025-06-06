@@ -4,7 +4,7 @@ import React from "react";
 export const News = () => {
   return (
     <section className="news-carousel">
-      <div className="wrap-content">
+      <div className="content">
         <div className="carousel" style={{ width: "100%" }}>
           <h2 className="title">Новинки</h2>
           <div className="position numbers">

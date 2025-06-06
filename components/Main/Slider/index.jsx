@@ -4,7 +4,7 @@ import React from 'react';
 export const Slider = () => {
     return (
         <section className="promotions">
-            <div className="wrap-content">
+            <div className="content">
                 <div className="carousel cycled" style={{ width: "100%" }}>
                     <div className="row">
                         {/* Карточка 1 */}

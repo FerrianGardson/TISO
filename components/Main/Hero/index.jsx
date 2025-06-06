@@ -3,7 +3,7 @@ import React from 'react';
 
 export const Hero = () => {
     return (<section className="hero">
-        <div className="wrap-content">
+        <div className="content">
           <div className="main">
             <div className="label"></div>
             <p className="subtitle">Кондитерская фабрика SHOKOLAT`E предлагает:</p>
