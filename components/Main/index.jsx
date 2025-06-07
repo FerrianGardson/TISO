@@ -5,6 +5,7 @@ import { News } from "./News";
 import { Slider } from "./Slider";
 import AdvantageBox from "./AdvantageBox";
 import Card from "./Card";
+import Tug from "./Tug";
 
 export const Main = () => {
   return (
@@ -12,24 +13,27 @@ export const Main = () => {
       <div className="screen tech">
         <div className="content">
           <h2>Техника под&nbsp;задачи вашего&nbsp;бизнеса</h2>
-          <div className="row advantages">
-            <AdvantageBox
+          <div className="row">
+            <Card
+              cl="col-3"
               image="/img/tiso/tech_tugs.png"
-              title="Электрические буксиры"
+              title="Универсальное применение"
               text="Буксиры для перемещения грузов до&nbsp;15&nbsp;тонн."
             />
-            <AdvantageBox
+            <Card
+              cl="col-3"
               image="/img/tiso/tech_platforms.png"
               title="Платформенные электротележки"
               text="Электротележки для перевозки грузов до&nbsp;1&nbsp;тонны."
             />
-            <AdvantageBox
+            <Card
+              cl="col-3 fix"
               image="/img/tiso/tech_ride_on_trolleys.png"
               title="Электротележки с&nbsp;местом для&nbsp;водителя"
               text="Электротележки для транспортировки персонала и&nbsp;грузов."
-              klass="fix"
             />
-            <AdvantageBox
+            <Card
+              cl="col-3"
               image="/img/tiso/tech_lifting_equipment.png"
               title="Погрузочное оборудование"
               text="Оборудование для подъема груза в&nbsp;различных условиях."
@@ -37,25 +41,119 @@ export const Main = () => {
           </div>
         </div>
       </div>
+      <div className="screen faq">
+        <div className="content">
+          <h2>Преимущества нашей техники</h2>
+          <div className="row">
+            <Card
+              cl="col-6 no-img"
+              title="Универсальное применение"
+              text="Электротележки &laquo;ТИСО&raquo; успешно работают в&nbsp;логистике, торговле, на&nbsp;производствах, складах, в&nbsp;больницах и&nbsp;аэропортах. Их&nbsp;используют для перевозки грузов, персонала и&nbsp;спецоборудования&nbsp;&mdash; как внутри помещений, так и&nbsp;на&nbsp;улице."
+            />
+            <Card
+              cl="col-6 no-img"
+              title="Маневренность и безопасность"
+              text="Компактные модели, такие как &laquo;Импульс&nbsp;1&raquo; или &laquo;Заряд&nbsp;3&raquo;, легко проходят в&nbsp;узких коридорах. На&nbsp;всех моделях установлены электромагнитные тормоза, системы безопасности и&nbsp;управление скоростью, которые позволяют уверенно работать даже в&nbsp;сложных условиях."
+            />
+            <Card
+              cl="col-6 no-img"
+              title="Гибкость под задачи клиента"
+              text="Модели &laquo;Электра&raquo;, &laquo;Заряд&raquo;, &laquo;Молния&raquo; доступны с&nbsp;разными платформами, полками, кузовами и&nbsp;ложементами. Возможно изготовление под нестандартные грузы&nbsp;&mdash; от&nbsp;коробок до&nbsp;длинномерных панелей и&nbsp;труб."
+            />
+            <Card
+              cl="col-6 no-img"
+              title="Производительность без перегрузки"
+              text="Платформенные и&nbsp;буксирные тележки берут на&nbsp;себя тяжелую работу: перевозят грузы до&nbsp;15&nbsp;тонн, снижают физическую нагрузку на&nbsp;персонал и&nbsp;минимизируют риск травм."
+            />
+          </div>
+          <h2>Часто задаваемые вопросы</h2>
+          <div className="row">
+            <Card
+              cl="col-6 no-img"
+              title="Какой вес могут перевозить ваши электротележки?"
+              text="В&nbsp;зависимости от&nbsp;модели: от&nbsp;300&nbsp;кг (например, &laquo;Заряд&nbsp;3&raquo;) до&nbsp;15&nbsp;000&nbsp;кг (например, &laquo;Энергия&nbsp;15&raquo;)."
+            />
+            <Card
+              cl="col-6 no-img"
+              title="Подходят ли тележки для работы на улице?"
+              text="Да, большинство моделей рассчитаны на&nbsp;работу как в&nbsp;помещении, так и&nbsp;на&nbsp;открытых площадках, в&nbsp;том числе на&nbsp;неровных покрытиях."
+            />
+            <Card
+              cl="col-6 no-img"
+              title="От&nbsp;чего зависит выбор аккумулятора в&nbsp;тележке?"
+              text="От&nbsp;условий работы: GEL предназначен для спокойной эксплуатации в&nbsp;помещении. Литиевый — для частой, интенсивной работы, особенно на&nbsp;улице и&nbsp;в&nbsp;холоде."
+            />
+            <Card
+              cl="col-6 no-img"
+              title="Где производится оборудование?"
+              text="Вся продукция производится в&nbsp;России, на&nbsp;собственном заводе в&nbsp;Санкт-Петербурге, сертифицированном по&nbsp;ISO 9001:2015."
+            />
+            <Card
+              cl="col-6 no-img"
+              title="Есть&nbsp;ли сервисное обслуживание и&nbsp;гарантия?"
+              text="Да, компания &laquo;ТИСО&raquo; предоставляет сервисное обслуживание и&nbsp;гарантию на&nbsp;свою продукцию. Гарантийный срок на&nbsp;все модели электротележек составляет 12&nbsp;месяцев. Кроме того, компания обеспечивает постгарантийный сервис и&nbsp;поставку комплектующих для своей техники."
+            />
+            <Card
+              cl="col-6 no-img"
+              title="Можно&nbsp;ли адаптировать тележку под наши задачи?"
+              text="Да, доступны различные опции: платформы и&nbsp;корзины разных размеров, контейнеры, колёса с&nbsp;разными свойствами, противоскользящие цепи, проблесковые маячки и&nbsp;другие аксессуары."
+            />
+            <Card
+              cl="col-6 no-img"
+              title="Возможна ли поставка в другие города и страны?"
+              text="Да, компания работает по&nbsp;всей России и&nbsp;поставляет продукцию в&nbsp;страны СНГ и&nbsp;ближнего зарубежья."
+            />
+            <Card
+              cl="col-6 no-img"
+              title="Вы&nbsp;разрабатываете индивидуальные модели?"
+              text="Да, компания &laquo;ТИСО&raquo; разрабатывает изделия по&nbsp;техническому заданию, чертежам и&nbsp;эскизам заказчика."
+            />
+          </div>
+        </div>
+      </div>
       <div className="screen advantages">
         <div className="content">
-          <h2>Выгода от&nbsp;работы именно с&nbsp;нами</h2>
+          <h2>Выгода от&nbsp;работы именно с&nbsp;нами</h2>
           <div className="row advantages">
-            <AdvantageBox
+            <Card
+              cl="col-3"
               image="/img/tiso/pref01.png"
               title="Постгарантийный сервис и&nbsp;поставка комплектующих"
             />
-            <AdvantageBox
+            <Card
+              cl="col-3"
               image="/img/tiso/pref02.png"
               title="Представительства по&nbsp;всей стране"
             />
-            <AdvantageBox
+            <Card
+              cl="col-3"
               image="/img/tiso/pref03.png"
               title="20&nbsp;лет опыта производства"
             />
-            <AdvantageBox
+            <Card
+              cl="col-3"
               image="/img/tiso/pref04.png"
               title="Разработка индивидуальных проектов"
+            />
+          </div>
+        </div>
+      </div>
+      <div className="screen tugs">
+        <div className="content">
+          <h1>Электрические буксиры</h1>
+          <div className="row">
+            <Tug
+              cl="col-3"
+              image="/img/tiso/tug.png"
+              title="Энергия 6"
+              text="Средний промышленный тягач."
+              link="https://pk-tiso.ru/tug"
+              linktext="Подробнее"
+              specs={{
+                speed: "5.5",
+                load: "6000",
+                slope: "15%",
+              }}
             />
           </div>
         </div>
@@ -104,7 +202,7 @@ export const Main = () => {
           <div className="row">
             <Card
               cl="col-3"
-              image="/img/tiso/solutions_01.png"
+              image="/img/tiso/pogryzchiki.png"
               title="Колеса для&nbsp;спецтехники"
               text="Изготовление колес для&nbsp;всех типов погрузчиков, ричтраков, штабелеров и&nbsp;другой спецтехники."
               link="https://pk-tiso.ru/prom-kolesa/kolesa-dlya-pogruzchikov/"
@@ -112,7 +210,7 @@ export const Main = () => {
             />
             <Card
               cl="col-3"
-              image="/img/tiso/solutions_02.png"
+              image="/img/tiso/konveer.png"
               title="Конвейерные ролики и&nbsp;рольганги"
               text="Гравитационные и&nbsp;приводные ролики и&nbsp;рольганги под различные типы ремней и&nbsp;звездочек."
               link="https://pk-tiso.ru/konveier/"
@@ -120,7 +218,7 @@ export const Main = () => {
             />
             <Card
               cl="col-3"
-              image="/img/tiso/solutions_03.png"
+              image="/img/tiso/poliyeretan.png"
               title="Литье изделий из полиуретана"
               text="Современное оборудование и технологии позволяют изготавливать изделия любой сложности в кратчайшие сроки."
               link="https://pk-tiso.ru/litie-poly/"
@@ -128,7 +226,7 @@ export const Main = () => {
             />
             <Card
               cl="col-3"
-              image="/img/tiso/solutions_04.png"
+              image="/img/tiso/doposle.png"
               title="Восстановление колес полиуретаном"
               text="Наши технологии позволяют продлить срок службы колес и&nbsp;улучшить их&nbsp;эксплуатационные характеристики."
               link="https://pk-tiso.ru/prom-kolesa/vosstanovlenie/"
@@ -136,15 +234,15 @@ export const Main = () => {
             />
             <Card
               cl="col-3"
-              image="/img/tiso/solutions_05.png"
+              image="/img/tiso/kolesa.png"
               title="Колеса и колесные опоры"
               text="Производство колес и роликов по передовым технологиям. Диаметр от 20 мм до 1000 мм. Грузоподъемность от 15 кг до 50 т."
               link="https://pk-tiso.ru/prom-kolesa/sobstvennue-kolesa/"
               linktext="Подробнее"
             />
             <Card
-              cl="col-3"
-              image="/img/tiso/solutions_06.png"
+              cl="col-3 zamki"
+              image="/img/tiso/zamki.png"
               title="Поставка замков-защелок"
               text="Предлагаем широкий ассортимент надежных замков-защелок, петель и ручек."
               link="https://pk-tiso.ru/komplekt/zaschelki/zaschelki/"
@@ -152,7 +250,7 @@ export const Main = () => {
             />
             <Card
               cl="col-3 module"
-              image="/img/tiso/solutions_07.png"
+              image="/img/tiso/modylnaya.png"
               title="Модульные системы"
               text="Легковозводимые конструкции подходят для создания рабочих зон, конвейерных линий и другого оборудования."
               link="https://pk-tiso.ru/modulsistemy/"
@@ -160,7 +258,7 @@ export const Main = () => {
             />
             <Card
               cl="col-3 fix"
-              image="/img/tiso/solutions_08.png"
+              image="/img/tiso/stalnya.png"
               title="Стальные конструкции"
               text="Технологические тележки, стойки, стеллажи и специализированные изделия для различных отраслей промышленности."
               link="https://pk-tiso.ru/telejki/"

@@ -49,7 +49,12 @@ $h5: 18px;
 $h6: $rem;
 $label: $rem;
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: $color-two;
   font-family: $font-header;
   font-style: normal;
@@ -58,13 +63,25 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: $header-transform;
 }
 
-h1 { font-size: $h1; }
-h2 { font-size: $h2; }
-h3 { font-size: $h3; }
-h4 { font-size: $h4; }
-h5 { font-size: $h5; }
-h6 { font-size: $h6; }
-
+h1 {
+  font-size: $h1;
+}
+h2 {
+  font-size: $h2;
+  margin-bottom: 60px-36;
+}
+h3 {
+  font-size: $h3;
+}
+h4 {
+  font-size: $h4;
+}
+h5 {
+  font-size: $h5;
+}
+h6 {
+  font-size: $h6;
+}
 
 p,
 a {
@@ -85,11 +102,11 @@ a {
     color: $color-hover;
   }
 
-  &:active, &:focus {
-    color: $color-focus
+  &:active,
+  &:focus {
+    color: $color-focus;
   }
 }
-
 
 // ===========================
 // 📐 Layout
@@ -159,17 +176,42 @@ $gap: 10px;
 .col-3 {
   width: $col * 3 + $gap * 2;
 }
+.col-6 {
+  width: $col * 6 + $gap * 5;
+}
 
 // Фиксы
 
-.advantages .fix h4,
-.advantages .fix p {
-  letter-spacing: -0.5px;
+.advantages .row {
+  h4 {
+    text-align: center;
+  }
+
+  .wrap {
+    width: 100%;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+}
+
+  .fix {
+    h4,
+    p {
+      letter-spacing: -0.5px;
+    }
+  }
+}
+.tech {
+  h4,
+  p {
+    text-align: center;
+  }
 }
 
 .solutions {
   .wrap {
-    min-height: 192px;
+    height: 192px;
     display: flex;
   }
 
@@ -183,7 +225,8 @@ $gap: 10px;
 
   // Фиксы
 
-  a, p {
+  a,
+  p {
     z-index: 1;
   }
 
@@ -196,7 +239,7 @@ $gap: 10px;
       position: absolute;
       left: 0;
       bottom: 0;
-      width: fit-content;
+      width: 220px;
       height: fit-content;
       /* z-index: 0; */
     }
@@ -204,5 +247,18 @@ $gap: 10px;
     .wrap {
       position: relative;
     }
+  }
+}
+
+.no-img .wrap {
+  display: none;
+}
+
+.faq {
+  .row {
+    row-gap: 20px;
+  }
+  .row:nth-child(2) {
+    margin-bottom: 60px;
   }
 }
