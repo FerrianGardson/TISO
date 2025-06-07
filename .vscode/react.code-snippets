@@ -1,0 +1,22 @@
+{
+  "Путь к картинке": {
+    "prefix": "@img",
+    "body": ["/img/"],
+    "description": "Путь в public/img/",
+    "scope": "javascriptreact,typescriptreact,javascript,typescript"
+  },
+
+  "Путь к иконке": {
+    "prefix": "@icon",
+    "body": ["/icons/"],
+    "description": "Путь в public/icons/",
+    "scope": "javascriptreact,typescriptreact,javascript,typescript"
+  },
+
+  "Header": {
+    "prefix": ["header", "stub", "copyright"],
+    "body": "Copyright. Foo Corp 2028",
+    "description": "Adds copyright...",
+    "scope": "javascript,typescript"
+  }
+}

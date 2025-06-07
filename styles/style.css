@@ -256,7 +256,7 @@ p {
 }
 
 .screen:nth-child(2) {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.01) 100%), url(/img/tiso/bg_blur.png) lightgray 50%/cover no-repeat;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.01) 100%), url(/img/bg_blur.png) lightgray 50%/cover no-repeat;
 }
 
 .content {

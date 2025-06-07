@@ -129,10 +129,10 @@ a {
       rgba(236, 236, 236, 0.5) 0%,
       rgba(236, 236, 236, 0.5) 100%
     ),
-    url(/img/tiso/bg_blur.png) lightgray 50% / cover no-repeat;
+    url(/img/bg_blur.png) lightgray 50% / cover no-repeat;
 }
 
-.content {
+.screen > .content {
   display: flex;
   max-width: $content-width;
   min-width: 290px;
@@ -142,7 +142,7 @@ a {
   flex-wrap: wrap;
 }
 
-.row {
+.content > .row {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
@@ -189,11 +189,10 @@ $gap: 10px;
 
   .wrap {
     width: 100%;
-    display: flex
-;
+    display: flex;
     align-items: center;
     justify-content: center;
-}
+  }
 
   .fix {
     h4,
@@ -260,5 +259,106 @@ $gap: 10px;
   }
   .row:nth-child(2) {
     margin-bottom: 60px;
+  }
+}
+
+.tug {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--color-white, #fff);
+  gap: 0;
+
+  /* Тень */
+  box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.25);
+
+  .content {
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    background: var(--color-white, #fff);
+    position: relative;
+
+    img {
+      position: absolute;
+      right: 0;
+      top: -90px;
+      width:160px;
+    }
+  }
+  .photo {
+    display: flex;
+    padding: 12px 24px;
+    flex-wrap: nowrap;
+    background: $gray;
+
+    img {
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    img:hover {
+      transform: scale(1.02);
+    }
+  }
+  .stroke {
+    display: flex;
+    height: 12px;
+    width: 100%;
+    background: $color-button;
+  }
+  .specs {
+    display: flex;
+    padding: 24px;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 12px;
+    align-self: stretch;
+    flex-wrap: wrap;
+    background: var(--color-three-10, #ececec);
+
+    span {
+      color: #666;
+      text-align: center;
+      font-family: "Open Sans";
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; /* 16.8px */
+    }
+
+    .spec {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.popup img.popup-image {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 8px;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.5);
+}
+
+/* Плавное появление */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
