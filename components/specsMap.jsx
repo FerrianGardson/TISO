@@ -7,7 +7,7 @@ const specsMap = {
   },
   weight: {
     icon: "/icons/weight.svg",
-    label: "Грузоподъёмность, кг",
+    label: "Грузоподъёмность, т",
   },
   width: {
     icon: "/icons/width.svg",
@@ -35,7 +35,7 @@ const specsMap = {
   },
   buxir: {
     icon: "/icons/buxir.svg",
-    label: "Класс техники",
+    label: "Буксируемая масса, т",
   },
 };
 

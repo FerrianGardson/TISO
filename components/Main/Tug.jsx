@@ -6,7 +6,7 @@ export default function Tug({ cl, image, title, text, link, linktext, specs }) {
   const [visiblePreviews, setVisiblePreviews] = useState(["01", "02", "03"]);
 
   const handlePreviewClick = (suffix) => {
-    setPopupSrc(`/img/${image}_${suffix}full.png`);
+    setPopupSrc(`/img/${image}_${suffix}_full.png`);
   };
 
   const handleClose = (e) => {
@@ -48,10 +48,17 @@ export default function Tug({ cl, image, title, text, link, linktext, specs }) {
             const spec = specsMap[key];
             if (!spec) return null;
 
+            const unit = spec.label.includes(",")
+              ? spec.label.split(",")[1].trim()
+              : "";
+
             return (
               <div key={key} className="spec">
                 <img src={spec.icon} title={spec.label} alt={spec.label} />
-                <span className="value">{value}</span>
+                <span className="value">
+                  {value}
+                  {unit && ` ${unit}`}
+                </span>
               </div>
             );
           })}
