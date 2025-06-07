@@ -1,12 +1,11 @@
-@use "variables" as *;
-
 @import "reset";
 @import "carousel";
 @import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 // ТИСО
 
-.stretch > div, .self-stretch {
+.stretch > div,
+.self-stretch {
   display: flex;
   align-self: stretch;
   align-items: flex-start;
@@ -19,29 +18,48 @@
 // 🧩 Компоненты
 // ===========================
 
-.advantages .row {
-  h4 { text-align: center; }
-  .wrap {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+// .wrap {
+//   margin:auto;
+// }
+
+// .advantages {
+//   h4 {
+//     text-align: center;
+//     max-width: 200px;
+//   }
+// }
+
+.tech .row {
+  h4 {
+    text-align: center;
   }
   .fix {
-    h4, p {
+    h4,
+    p {
       letter-spacing: -0.5px;
     }
+  }
+
+  .card {
+    align-self: stretch;
+  }
+
+  .wrap {
+    // margin: auto;
   }
 }
 
 .tech {
-  h4, p { text-align: center; }
+  h4,
+  p {
+    text-align: center;
+  }
 }
 
 .solutions {
   .wrap {
     height: 192px;
-    width:100%;
+    width: 100%;
     display: flex;
   }
   img {
@@ -52,9 +70,14 @@
     object-position: left bottom;
   }
 
-  a, p { z-index: 1; }
+  a,
+  p {
+    z-index: 1;
+  }
 
-  .module h4 { width: 80%; }
+  .module h4 {
+    width: 80%;
+  }
 
   .fix {
     img {
@@ -64,20 +87,28 @@
       width: 220px;
       height: fit-content;
     }
-    .wrap { position: relative; }
+    .wrap {
+      position: relative;
+    }
   }
 }
 
-.no-img .wrap { display: none; }
+.no-img .wrap {
+  display: none;
+}
 
 .faq {
-  .row { row-gap: 20px; }
-  .row:nth-child(2) { margin-bottom: 60px; }
+  .row {
+    // row-gap: 20px;
+  }
+  .row:nth-child(2) {
+    margin-bottom: 60px;
+  }
 }
 
 .tugs.row {
   margin-top: 40px;
-  row-gap: 120px!important;
+  row-gap: 120px;
 }
 
 .tug {
@@ -87,7 +118,7 @@
   justify-content: flex-end;
   align-self: stretch;
   background: var(--white);
-  gap: 0!important;
+  gap: 0 !important;
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
 
   .content {
@@ -125,7 +156,7 @@
   }
 
   .stroke {
-    height: 12px!important;
+    height: 12px !important;
     width: 100%;
     background: var(--color-button);
   }
@@ -184,6 +215,33 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.tugs h2 {
+  margin-bottom: 2rem;
+}
+
+.row.stretch {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+  .advantages .row {
+    text-align: center;
+  }
+
+  .advantages .wrap {
+    margin: auto;
+  }
+
+  #tech .card {
+    display: flex;
+    justify-content: flex-end;
 }
