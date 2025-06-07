@@ -31,7 +31,7 @@ const specsMap = {
   },
   cargo: {
     icon: "/icons/cargo.svg",
-    label: "Тип груза",
+    label: "Длина груза, м",
   },
   buxir: {
     icon: "/icons/buxir.svg",
