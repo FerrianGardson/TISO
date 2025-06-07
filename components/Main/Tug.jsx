@@ -1,7 +1,7 @@
 import { useState } from "react";
 import specsMap from "@/components/specsMap";
 
-export default function Tug({ cl, image, title, text, link, linktext, specs }) {
+export default function Tug({ cl, image, title, subtitle, text, link, linktext, specs }) {
   const [popupSrc, setPopupSrc] = useState(null);
   const [visiblePreviews, setVisiblePreviews] = useState(["01", "02", "03"]);
 
@@ -21,9 +21,10 @@ export default function Tug({ cl, image, title, text, link, linktext, specs }) {
 
   return (
     <div className={`tug ${cl}`}>
-      <div className="content">
+      <div className="content self-stretch">
         <img src={`/img/${image}.png`} alt={title} />
-        <h3>{title}</h3>
+        <div><h3>{title}</h3>
+        <h6>{subtitle}</h6></div>
         <p>{text}</p>
         <a href={link}>{linktext}</a>
       </div>

@@ -86,8 +86,6 @@ h6 {
 p,
 a {
   color: $text;
-
-  /* P */
   font-family: $font-text;
   font-size: $p;
   font-style: normal;
@@ -95,6 +93,10 @@ a {
   line-height: 140%; /* 22.4px */
 }
 
+p b {
+  font-weight: bold;
+  color: $color-two;
+}
 a {
   color: $color-button;
 
@@ -106,6 +108,10 @@ a {
   &:focus {
     color: $color-focus;
   }
+}
+
+b {
+  font-weight: bold;
 }
 
 // ===========================
@@ -178,6 +184,16 @@ $gap: 10px;
 }
 .col-6 {
   width: $col * 6 + $gap * 5;
+}
+
+.stretch > div,
+.self-stretch {
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: nowrap;
 }
 
 // Фиксы
@@ -262,12 +278,17 @@ $gap: 10px;
   }
 }
 
-.tugs.row {margin-top:40px;}
+.tugs.row {
+  margin-top: 40px;
+  row-gap: 120px;
+}
 
 .tug {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
+  justify-content: flex-end;
+  align-self: stretch;
   background: var(--color-white, #fff);
   gap: 0;
 
@@ -275,12 +296,10 @@ $gap: 10px;
   box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.25);
 
   .content {
-    display: flex;
     padding: 24px;
-    flex-direction: column;
-    align-items: flex-start;
-    background: var(--color-white, #fff);
+    background: $white;
     position: relative;
+    height: -webkit-fill-available;
 
     img {
       position: absolute;
@@ -294,7 +313,7 @@ $gap: 10px;
     align-self: stretch;
     justify-content: center;
     padding: 12px;
-    gap:12px;
+    gap: 12px;
     flex-wrap: nowrap;
     background: $gray;
 
@@ -374,4 +393,10 @@ $gap: 10px;
   to {
     opacity: 1;
   }
+}
+
+// Фикс
+
+.screen > .content > h2 {
+  width: $content-width;
 }
