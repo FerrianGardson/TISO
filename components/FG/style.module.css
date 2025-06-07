@@ -15,7 +15,7 @@ section.fg a.button {
   text-decoration: none;
   padding: 0.5rem 1rem;
   color: white;
-  border-radius: 4px;
+  /* border-radius: 4px; */
 }
 section.fg .content.row.spread,
 section.fg .disclaimer {
@@ -30,7 +30,7 @@ section.fg .disclaimer {
   padding: 1rem;
   box-sizing: border-box;
   margin-top: 1rem !important;
-  border-radius: 4px;
+  /* border-radius: 4px; */
 }
 section.fg .row {
   display: flex;

@@ -15,9 +15,29 @@
   --gray-dark: #c0c0c0;
   --text: #686868;
 
+  --outer-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
+
   .color-one {
     color: var(--color-one);
   }
+
+  --bg-even: linear-gradient(
+      180deg,
+      rgba(236, 236, 236, 0.5) 0%,
+      rgba(236, 236, 236, 0.5) 100%
+    ),
+    url(/img/bg_blur.png) lightgray 50% / cover no-repeat;
+
+  // @media (prefers-color-scheme: dark) {
+  //   --color-two: #dfdfdf;
+  //   --color-three: #252525;
+  //   --white: #1f1f1f;
+  //   --text: #c4c4c4;
+  //   --bg-even: #363636;
+  //   --outer-shadow: 4px 4px 12px #00000091;
+  //   --gray: #252525;
+  //   --gray-dark: #363636;
+  // }
 
   /* 📦 Container */
   --content-width: 1190px;
@@ -130,12 +150,7 @@
 }
 
 .screen:nth-child(2n-1) {
-  background: linear-gradient(
-      180deg,
-      rgba(236, 236, 236, 0.5) 0%,
-      rgba(236, 236, 236, 0.5) 100%
-    ),
-    url(/img/bg_blur.png) lightgray 50% / cover no-repeat;
+  background: var(--bg-even);
 }
 
 .screen > .content {
@@ -207,7 +222,7 @@ img {
     order: -1;
   }
   .screen > .content,
-  .screen:not(.about) > .content > .row {
+  .screen:not(#about) > .content > .row {
     justify-content: center; // костыль для центрирования на широких мобилах диасов
     // row-gap: 10px;
   }
@@ -238,20 +253,20 @@ img {
 
   // Фиксы
 
-  .solutions .card.col-3.fix {
+  #solutions .card.col-3.fix {
     height: 460px;
   }
 
-  .solutions .fix .wrap {
+  #solutions .fix .wrap {
     /* vertical-align: bottom; */
     margin-bottom: 0;
   }
 
-  .contacts .row {
+  #contacts .row {
     // row-gap: 30px !important;
   }
 
-  .contacts button {
+  #contacts button {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
@@ -260,13 +275,11 @@ img {
     margin-top: 1rem;
   }
 
-  .solutions .row {
+  #solutions .row {
     // row-gap: 64px !important;
   }
 
   .wrap {
     // margin: auto;
   }
-
-
 }

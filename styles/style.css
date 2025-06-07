@@ -132,7 +132,7 @@ div.carousel .position.numbers span {
 buttondiv.carousel-button {
   width: 30px;
   height: 30px;
-  border-radius: 15px;
+  /* border-radius: 15px; */
   border: 0;
   background: #c7c7c7;
 }
@@ -284,15 +284,15 @@ p {
   gap: 10px;
 }
 
-.advantages .fix h4, .advantages .fix p {
+#advantages .fix h4, #advantages .fix p {
   letter-spacing: -0.5px;
 }
 
-.solutions .wrap {
+#solutions .wrap {
   min-height: 192px;
   display: flex;
 }
-.solutions img {
+#solutions img {
   display: block;
   width: 100%;
   height: auto;
