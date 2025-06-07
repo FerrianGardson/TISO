@@ -6,6 +6,7 @@ import { Slider } from "./Slider";
 import AdvantageBox from "./AdvantageBox";
 import Card from "./Card";
 import Tug from "./Tug";
+import Button from "./Button";
 
 export const Main = () => {
   return (
@@ -486,7 +487,7 @@ export const Main = () => {
                 </p>
             
               </div>
-              <button>Перезвоните мне</button>
+              <Button>Перезвоните мне</Button>
             </div>
             <div className="col-6">
               <img src="/img/map.png" alt="Главный офис" />
