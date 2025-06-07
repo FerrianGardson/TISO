@@ -1,0 +1,52 @@
+:root {
+  /* 🎨 Colors */
+  --color-one: #89191c;
+  --color-two: #222c35;
+  --color-three: #ececec;
+
+  --color-visited: #551719;
+  --color-button: #89191c;
+  --color-hover: #a8181c;
+  --color-focus: #ea181d;
+
+  --white: #ffffff;
+  --black: var(--color-two);
+  --gray: var(--color-three);
+  --gray-dark: #c0c0c0;
+  --text: #686868;
+
+  /* 📦 Container */
+  --content-width: 1190px;
+  --padding-screen: 120px 64px;
+  --padding-header: 60px;
+
+  /* 🔠 Typography */
+  --font-header: "Open Sans";
+  --font-text: "Open Sans";
+  --header-transform: uppercase;
+  --h1: 48px;
+  --h2: 38px;
+  --h3: 30px;
+  --h4: 22px;
+  --h5: 18px;
+  --h6: 1rem;
+  --label: 1rem;
+  --p: 1rem;
+
+  /* 📐 Grid */
+  --col: 90px;
+  --gap: 10px;
+}
+
+@media (max-width: 1189px) {
+  :root {
+    --content-width:100%;
+    --padding-screen: 36px;
+    --padding-header: 12px;
+    --h1: 28px;
+    --h2: 24px;
+    --h3: 20px;
+    --h4: 18px;
+    --h5: 16px;
+  }
+}

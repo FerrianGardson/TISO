@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import { Hero } from "./Hero";
-import { News } from "./News";
-import { Slider } from "./Slider";
+import { Hero } from "./Main/Hero";
+import { News } from "./Main/News";
+import { Slider } from "./Main/Slider";
 import AdvantageBox from "./AdvantageBox";
 import Card from "./Card";
 import Tug from "./Tug";

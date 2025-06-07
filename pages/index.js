@@ -4,7 +4,7 @@ import Image from "next/image";
 import localFont from "next/font/local";
 import styles from "@/styles/Home.module.css";
 import { Header } from "@/components/Header";
-import { Main } from "@/components/Main";
+import { Main } from "@/components";
 import { Footer } from "@/components/Footer";
 
 const geistSans = localFont({
