@@ -7,10 +7,12 @@ import AdvantageBox from "./AdvantageBox";
 import Card from "./Card";
 import Tug from "./Tug";
 import Button from "./Button";
+import Header from "./Header";
 
 export const Main = () => {
   return (
     <div className="page">
+      <Header></Header>
       <div className="screen hero" id="hero">
         <div className="content">
           <div className="row">

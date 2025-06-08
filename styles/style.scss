@@ -117,13 +117,13 @@
   align-items: stretch;
   justify-content: flex-end;
   align-self: stretch;
-  background: var(--white);
+  background: var(--color-white);
   gap: 0 !important;
-  box-shadow: var(--outer-shadow);
+  box-shadow: var(--shadow-drop);
 
   .content {
     padding: 24px;
-    background: var(--white);
+    background: var(--color-white);
     position: relative;
     height: -webkit-fill-available;
 
@@ -211,7 +211,7 @@
   max-width: 90vw;
   max-height: 90vh;
   // border-radius: 8px;
-  box-shadow: var(--outer-shadow);
+  box-shadow: var(--shadow-drop);
 }
 
 @keyframes fadeIn {
@@ -228,20 +228,35 @@
 }
 
 .row.stretch {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
-  #advantages .row {
-    text-align: center;
-  }
+#advantages .row {
+  text-align: center;
+}
 
-  #advantages .wrap {
-    margin: auto;
-  }
+#advantages .wrap {
+  margin: auto;
+}
 
-  #tech .card {
-    display: flex;
-    justify-content: flex-end;
+#tech .card {
+  display: flex;
+  justify-content: flex-end;
+}
+
+img.icon.phone {
+  /* width: 24px; */
+  position: relative;
+  left: -4px;
+  top: 4px;
+}
+
+img {
+  max-width: 100%;
+}
+
+div#hero {
+  margin-top: 160px;
 }

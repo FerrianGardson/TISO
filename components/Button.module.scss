@@ -17,10 +17,11 @@
 
 .btn__solid {
   background: var(
-    --Gradient,
+    --gradient,
     linear-gradient(180deg, #a8181c 0%, #89191c 100%)
   );
-  color: var(--white);
+  color: var(--color-white);
+  border-radius: var(--border-radius);
 
   &:hover {
     background-color: var(--color-hover);
