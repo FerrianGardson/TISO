@@ -16,20 +16,17 @@
 // === Variants ===
 
 .btn__solid {
-  background: var(
-    --gradient,
-    linear-gradient(180deg, #a8181c 0%, #89191c 100%)
-  );
+  background: var(--color-button);
   color: var(--color-white);
   border-radius: var(--border-radius);
 
   &:hover {
-    background-color: var(--color-hover);
+    background: var(--color-hover);
   }
 
   &:active,
   &:focus {
-    background-color: var(--color-focus);
+    background: var(--color-focus);
     outline: none;
   }
 }
