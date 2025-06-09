@@ -1,9 +1,5 @@
 "use client";
 import React from "react";
-import { Hero } from "./Main/Hero";
-import { News } from "./Main/News";
-import { Slider } from "./Main/Slider";
-import AdvantageBox from "./AdvantageBox";
 import Card from "./Card";
 import Tug from "./Tug";
 import Button from "./Button";
@@ -13,10 +9,11 @@ export const Main = () => {
   return (
     <div className="page">
       <Header></Header>
+      <div className="screen desktop fix"></div>
       <div className="screen hero" id="hero">
-        <div className="content">
+        <div className="content" id="hero-content">
           <div className="row">
-            <div className="col-6 self-stretch">
+            <div className="col-5 self-stretch">
               <h1>
                 Электрические тележки,<br></br>буксиры и тягачи<br></br>от{" "}
                 <span className="color-one bold">ПК ТИСО</span>
@@ -25,9 +22,9 @@ export const Main = () => {
                 Инновационные решения<br></br>для перевозки и буксировкигрузов
                 в различных условиях
               </p>
-            <Button>Бесплатная консультация</Button>
+              <Button>Бесплатная консультация</Button>
             </div>
-            <div className="col-6 hero">
+            <div className="col-7 hero">
               <img src="img/hero.png" alt="" />
             </div>
           </div>
@@ -396,25 +393,25 @@ export const Main = () => {
           </p>
           <div className="row">
             <Card
-            cl="col-3"
+              cl="col-3"
               image="/img/about_quality.png"
               title="Международный стандарт качества"
               text="Производство сертифицировано по&nbsp;ISO 9001:2015; каждый этап контролируется внутренней службой ОТК."
             />
             <Card
-            cl="col-3"
+              cl="col-3"
               image="/img/about_engineering.png"
               title="Инженерная экспертиза"
               text="Конструкторский отдел ТИСО разрабатывает изделия по&nbsp;ТЗ заказчика с&nbsp;авторским контролем и&nbsp;возможностью выезда инженеров на&nbsp;предприятие заказчика."
             />
             <Card
-            cl="col-3"
+              cl="col-3"
               image="/img/about_speed.png"
               title="Скорость и надёжность"
               text="За&nbsp;более чем 20&nbsp;лет компания ТИСО создала широкую сеть представительств по&nbsp;всей стране, что позволяет оперативно выполнять заказы по&nbsp;России и&nbsp;СНГ."
             />
             <Card
-            cl="col-3"
+              cl="col-3"
               image="/img/about_clients.png"
               title="Доверие лидеров отраслей"
               text="Среди заказчиков&nbsp;&mdash; автопром, авиа- и&nbsp;вагонстроение, торговые, горнодобывающие и&nbsp;перерабатывающие предприятия."

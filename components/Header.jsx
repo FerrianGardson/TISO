@@ -9,7 +9,7 @@ const Header = () => {
       <div className="content align-center">
         <div className="row space-between">
           <div className="col-3">
-            <a href="#hero" className={styles.logo}>
+            <a href="#" className={styles.logo}>
               <img src="/img/logo.svg" alt="ПК ТИСО" />
             </a>
           </div>
