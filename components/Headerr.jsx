@@ -16,17 +16,17 @@ const Headerr = () => {
           <div className="col-6">
             <div className={styles.contacts}>
               <a href="tel:+74951087592">
-                <img src="/icons/phone.svg" class="icon phone"></img>
+                <img src="/icons/phone.svg" className="icon phone"></img>
                 <b>МОСКВА:</b> +7 (495) 108-75-92
               </a>
               <a href="tel:+78123369095">
-                <img src="/icons/phone.svg" class="icon phone"></img>
+                <img src="/icons/phone.svg" className="icon phone"></img>
                 <b>САНКТ-ПЕТЕРБУРГ:</b> +7 (812) 336-90-95
               </a>
             </div>
           </div>
           <div className="col-3 right">
-            <Button outline>ПЕРЕЗВОНИТЕ МНЕ</Button>
+            <Button variant="outline">ПЕРЕЗВОНИТЕ МНЕ</Button>
           </div>
         </div>
       </div>
