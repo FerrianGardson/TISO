@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import styles from "./Header.module.scss";
+import styles from "./Headerr.module.scss";
 import Button from "./Button";
 
-const Header = () => {
+const Headerr = () => {
   return (
     <header className={styles.header + " fixed"}>
       <div className="content align-center">
@@ -61,4 +61,4 @@ const Header = () => {
   );
 };
 
-export default Header; // ⬅️ default-экспорт
+export default Headerr; // ⬅️ default-экспорт

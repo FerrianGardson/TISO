@@ -3,12 +3,12 @@ import React from "react";
 import Card from "./Card";
 import Tug from "./Tug";
 import Button from "./Button";
-import Header from "./Header";
+import Headerr from "./Headerr";
 
 export const Main = () => {
   return (
     <div className="page">
-      <Header></Header>
+      <Headerr></Headerr>
       <div className="screen desktop fix"></div>
       <div className="screen hero" id="hero">
         <div className="content" id="hero-content">
