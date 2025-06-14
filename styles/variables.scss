@@ -89,7 +89,8 @@
     font-weight: 700;
     line-height: normal;
     text-transform: var(--header-transform);
-    // width: -webkit-fill-available; //вернуться
+    width: clamp(0px, -webkit-fill-available, 100%);
+    //вернуться
   }
 
   h1 {

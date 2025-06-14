@@ -125,7 +125,8 @@
     padding: 24px;
     background: var(--color-white);
     position: relative;
-    // height: -webkit-fill-available; //вернуться
+    width: clamp(0px, -webkit-fill-available, 100%);
+    //вернуться
 
     img {
       position: absolute;
