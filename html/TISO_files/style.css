@@ -498,6 +498,7 @@
 }
 :root .page {
   width: 100%;
+  z-index: 0;
 }
 :root h1,
 :root h2,
@@ -532,7 +533,9 @@
   font-size: var(--h6);
 }
 :root a,
-:root p {
+:root p,
+:root label,
+:root input {
   color: var(--text);
   font-family: var(--font-text);
   font-size: var(--p);
@@ -558,6 +561,76 @@
 :root b {
   font-weight: 700;
 }
+
+button {
+  background: var(--color-button);
+  color: var(--color-white);
+  border-radius: var(--border-radius);
+}
+button:hover {
+  background: var(--color-hover);
+}
+button:active,
+button:focus {
+  background: var(--color-focus);
+  outline: none;
+}
+button.outline {
+  background: transparent;
+  color: var(--color-button);
+  border: 1px solid var(--color-button);
+  border-radius: var(--border-radius);
+}
+button.outline:hover {
+  background-color: rgba(137, 25, 28, 0.05);
+}
+button.outline:active,
+button.outline:focus {
+  background-color: rgba(137, 25, 28, 0.1);
+  outline: none;
+}
+button.sm {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+button.md {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+button.lg {
+  padding: 14px 28px;
+  font-size: 18px;
+}
+
+input {
+  display: flex;
+  height: 40px;
+  padding: 0 12px;
+  align-items: center;
+  gap: 12px;
+  align-self: stretch;
+
+  border-radius: var(--border-radius);
+  border: 1px solid #d8e0ef;
+  background: #fff;
+
+  /* P */
+  font-family: "Open Sans";
+  font-size: var(--p, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+}
+
+label.checkbox {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
 .screen {
   display: flex;
   justify-content: center;
@@ -674,6 +747,7 @@ header .content {
   p {
     max-width: 290px !important;
   }
+
   .tug h3,
   .tug p {
     text-align: left;
@@ -1102,4 +1176,8 @@ img {
 .screen.desktop.fix {
   height: 168px;
   padding: 0;
+}
+
+header.fixed {
+    position: fixed;
 }

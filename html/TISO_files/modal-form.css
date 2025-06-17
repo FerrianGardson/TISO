@@ -3,24 +3,114 @@
 }
 .modal {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 .modal-content {
-  background: white;
-  margin: 5% auto;
-  padding: 20px;
-  width: 90%;
-  max-width: 500px;
+  padding: 72px 96px;
+  justify-content: center;
+  border-radius: var(--border-radius);
+  background-color: #f8f8f8;
+  background-image: url(./TISO_files/bg_blur.png);
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: top left;
+  margin: auto;
+  margin-top: 20vh;
   position: relative;
-  border-radius: 10px;
 }
-.close-btn {
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.close-btn,
+close-btn:hover,
+close-btn:active,
+close-btn:focus {
   position: absolute;
-  right: 10px; top: 10px;
-  font-size: 24px;
-  background: none;
-  border: none;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  background: url("./close.svg") center 100% no-repeat !important;
+  display: block;
+  padding: 0 !important;
+}
+
+@media (max-width: 1189px) {
+  .modal-content {
+    padding: 2rem;
+    margin: 2rem auto !important;
+    width: 100% !important;
+  }
+
+  header.burger {
+    display: block !important; /* z-index: 100; */
+  }
+}
+
+nav.burger a {
+  color: var(--color-three) !important;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  gap: 8px;
+  display: flex;
+  flex-direction: row;
+}
+
+.burger nav {
+  background: var(--color-two);
+  width: fit-content;
+  /* padding: 1rem 2rem; */
+}
+
+nav.burger a:nth-of-type(2n-1) {
+  background: #192027;
+}
+
+header.burger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  display: block;
+}
+
+.burger .row {
+  background: #222c35;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.burger .menu {
+  background: url(./menu.svg) center center / cover no-repeat;
+  width: 36px;
+  height: 36px;
   cursor: pointer;
+}
+
+.burger .logo {
+  background: url(./logo_white.svg) center center no-repeat;
+  width: 82px;
+  height: 36px;
+}
+
+.burger .phone {
+  background: url(./phone_white.svg) center center no-repeat;
+  width: 36px;
+  height: 36px;
+}
+
+nav.burger a span {
+    font-size: 12px;
+    /* letter-spacing: -1px; */
 }
