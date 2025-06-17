@@ -471,7 +471,7 @@
       hsla(0, 0%, 93%, 0.5),
       hsla(0, 0%, 93%, 0.5)
     ),
-    url(/img/bg_blur.png) #d3d3d3 50% / cover no-repeat;
+    url(./bg_blur.png) #d3d3d3 50% / cover no-repeat;
   --content-width: 1190px;
   --padding-screen: 120px 64px;
   --padding-header: 60px;
