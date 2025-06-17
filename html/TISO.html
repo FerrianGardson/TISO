@@ -27,7 +27,12 @@
     <link rel="preload" href="./TISO_files/f14f8fd7f7ddedd9.css" as="style" />
     <link
       rel="stylesheet"
-      href="./TISO_files/f14f8fd7f7ddedd9.css"
+      href="./TISO_files/modal-form.css"
+      data-n-g=""
+    />
+    <link
+      rel="stylesheet"
+      href="./TISO_files/style.css"
       data-n-g=""
     />
     <link rel="preload" href="./TISO_files/340ae8ae28462567.css" as="style" />
@@ -1725,5 +1730,69 @@
       ></p
     ></next-route-announcer>
     <div id="eagle-drag-images" style="position: fixed; top: -100000px"></div>
+    <div id="modal-overlay" class="modal hidden">
+      <div class="modal-content">
+        <button id="close-modal" class="close-btn">&times;</button>
+        <form id="callback-form">
+          <h2>НУЖНА КОНСУЛЬТАЦИЯ?</h2>
+          <p>
+            Расскажите, как к вам обращаться, и мы перезвоним,<br />
+            чтобы бесплатно подобрать технику под ваши задачи.
+          </p>
+
+          <label>
+            Имя<br />
+            <input
+              type="text"
+              name="name"
+              placeholder="Как к вам обращаться"
+              required
+            />
+          </label>
+
+          <label>
+            Телефон<br />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="+7-666-666-69-69"
+              required
+              pattern="^\+7[\d\s\-\(\)]{10,}$"
+            />
+          </label>
+
+          <label>
+            <input type="checkbox" name="consent" required />
+            Согласие на
+            <a href="/privacy" target="_blank">обработку персональных данных</a>
+          </label>
+
+          <button type="submit">ПЕРЕЗВОНИТЕ МНЕ</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
+<script>
+  const modal = document.getElementById("modal-overlay");
+  const closeBtn = document.getElementById("close-modal");
+
+  // Вешаем обработчик на все кнопки с классом "open-modal"
+  document.querySelectorAll(".open-modal").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+    });
+  });
+
+  // Закрытие по кнопке ✕
+  closeBtn.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
+
+  // Закрытие по клику вне окна
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+    }
+  });
+</script>
